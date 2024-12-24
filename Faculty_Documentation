@@ -31,6 +31,12 @@ Person
         End_date
         Qualification (e.g., Master’s, PhD Candidate)
 
+Courses
+
+    CourseCode (Primary Key)
+    CourseName
+    DepartmentID (Foreign Key)
+
 Departments
 	DepartmentID
 	Department_name
@@ -43,13 +49,26 @@ Events
 	EventDate
 	OrganizedBy (Foreign key from professor)
 	
-Assignments -> type ('prj' , 'assesment')
-	AssignmentID
-	
+Assesments -> type ('prj' , 'assesment')
+	AssesmentID
 	Type
+	
+	Assignment
+		AssignmentID
+	Project
+		ProjectID
+	
 ClassRoom 
-Schedule 
+	ClassroomID (Primary Key)
+	BuildingName
+	RoomNumber
+	Capacity
+		
+	 
 Transportation
-library
+	VehicleID (Primary Key)
+	Capacity
+	RouteDetails
+	DriverID (Foreign Key From employee)	
 
 
