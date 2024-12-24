@@ -1,0 +1,55 @@
+Person
+
+    PersonID (Primary Key)
+    first_name
+    last_name
+    age (derived)
+    DOB
+    Contact_No
+    Email
+    Type
+    
+    Students:
+        StudentID (Primary Key, foreign key from Person)
+        Year
+        GPA (derived)
+        Graduated (boolean)
+        
+    Employees:
+        EmployeeID (Primary Key, foreign key from Person)
+        Hire_Date
+        End_date
+        
+    Professors:
+        ProfessorID (Primary Key, foreign key from Person)
+        Hire_Date
+        End_date
+        
+    TeachingAssistants:
+        TAID (Primary Key, foreign key from Person)
+        Hire_Date
+        End_date
+        Qualification (e.g., Master’s, PhD Candidate)
+
+Departments
+	DepartmentID
+	Department_name
+	Manager_ID (Foreign key from Professor)
+	
+Events
+	EventID (Primary Key)
+	Title
+	Description
+	EventDate
+	OrganizedBy (Foreign key from professor)
+	
+Assignments -> type ('prj' , 'assesment')
+	AssignmentID
+	
+	Type
+ClassRoom 
+Schedule 
+Transportation
+library
+
+
