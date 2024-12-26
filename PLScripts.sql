@@ -115,6 +115,15 @@ begin
     end if;
 end;
 
+create or replace trigger insertCheck 
+before update on students
+for each row
+begin
+    if :new.academicyear > 5 then
+        raise_application_error(-20001,'cant insert academic year more than 5');
+
+    end if;
+end;
 
 
 
