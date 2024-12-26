@@ -338,21 +338,79 @@ INSERT INTO StudentTransportation (studentID, vehicleID)
 VALUES (2, 2);
 
 
+delete courseassessments;
+
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('CS101', 1, 1, 2024, 'first', 15);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('CS101', 2, 1, 2024, 'first', 60);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('CS101', 3, 1, 2024, 'first', 15);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('IS102', 5, 2, 2024, 'second', 20);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('IS102', 6, 2, 2024, 'second', 60);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('IS102', 8, 2, 2024, 'second', 20);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('AI103', 1, 3, 2024, 'first', 10);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('AI103', 2, 3, 2024, 'first', 50);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('AI103', 3, 3, 2024, 'first', 20);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('CS201', 5, 4, 2024, 'second', 20);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('CS201', 6, 4, 2024, 'second', 60);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('CS201', 7, 4, 2024, 'second', 20);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('IS202', 5, 5, 2024, 'second', 15);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('IS202', 6, 5, 2024, 'second', 60);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('IS202', 7, 5, 2024, 'second', 10);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('AI204', 1, 6, 2024, 'first', 10);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('AI204', 2, 6, 2024, 'first', 55);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('AI204', 3, 6, 2024, 'first', 20);
+
+insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
+values ('AI204', 4, 6, 2024, 'first', 10);
 
 
 
 
 
 
+create table grades
+(
+    grade char(2) primary key,
+    num number(3)   
+);
 
-
-
-
-
-
-
-
-
-
-
-
+insert into grades (grade, num) values ('A', 90);
+insert into grades (grade, num) values ('B', 80);
+insert into grades (grade, num) values ('C', 70);
+insert into grades (grade, num) values ('D', 50);
+insert into grades (grade, num) values ('F', 0);

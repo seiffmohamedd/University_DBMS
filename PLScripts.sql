@@ -126,26 +126,50 @@ begin
 end;
 
 
+create or replace trigger ScoreCheck
+before insert on courseAssessments
+for each row
+declare 
+    assesID number;
+    mxscore number;
+begin
+    select maxScore into mxscore from assessments where assessmentID = :new.assessmentID;
+    if :new.grade > mxscore then
+        raise_application_error(-20002,'cant insert grade greater than the max score for this assessment');
+    end if;
+end;
+
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
+VALUES ('CS101', 1, 1, 2024, 'First', 110);
+
+
+create or replace trigger ScoreCheckUpdate
+before update on courseAssessments
+for each row
+declare 
+    assesID number;
+    mxscore number;
+begin
+    select maxScore into mxscore from assessments where assessmentID = :new.assessmentID;
+    if :new.grade > mxscore then
+        raise_application_error(-20002,'cant update grade greater than the max score for this assessment');
+    end if;
+end;
 
 
 
+create or replace package CalcGPA
+as 
+procedure getGPA(studid number);
+end;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+create or replace package body CalcGPA
+is
+    procedure getGPA(studid number)
+    is
+        
+    end;
+end;
+select * from assessments 
 
 
