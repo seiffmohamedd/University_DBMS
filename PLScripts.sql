@@ -167,9 +167,7 @@ create or replace package body CalcGPA
 is
     procedure getGPA(studid number)
     is
-        
+                
     end;
 end;
 select * from assessments 
-
-

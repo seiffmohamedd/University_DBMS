@@ -136,3 +136,20 @@ CREATE TABLE StudentTransportation (
 CREATE INDEX idx_student_department ON Students(departmentID);
 CREATE INDEX idx_employee_department ON Employees(departmentID);
 CREATE INDEX idx_course_instructor ON Courses(instructorID);
+
+
+
+
+select * from emp;
+select e1.ename , d.dname , e1.sal , 
+(select count(1)+1 from emp e2 where e2.sal > e1.sal and e1.DEPTNO = e2.DEPTNO ) as ra
+from emp e1 , dept d where e1.deptno=d.DEPTNO
+order by d.dname ,ra;
+
+
+select deptno , ename , sal , job , count(job) over(PARTITION by job ) from emp;
+
+
+
+
+
