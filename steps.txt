@@ -1,0 +1,2 @@
+docker cp /home/seif/University_DBMS/scriptRun.sql test:/schema.sql
+
