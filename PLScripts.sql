@@ -163,11 +163,11 @@ as
 procedure getGPA(studid number);
 end;
 
-create or replace package body CalcGPA
-is
-    procedure getGPA(studid number)
-    is
+-- create or replace package body CalcGPA
+-- is
+--     procedure getGPA(studid number)
+--     is
                 
-    end;
-end;
-select * from assessments 
+--     end;
+-- end;
+select * from assessments ;

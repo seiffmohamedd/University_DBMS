@@ -72,7 +72,7 @@ CREATE TABLE Assessments (
     maxScore NUMBER,
     PRIMARY KEY (assessmentID, year, semester)
 );
-commit;
+
 CREATE TABLE CourseAssessments (
     courseCode VARCHAR2(10),
     assessmentID NUMBER,
@@ -412,11 +412,17 @@ INSERT INTO CourseClassroom (courseCode, classroomID, datee) VALUES
     ('DS203', 16, TO_DATE('18-03-2025 15:00', 'DD-MM-YYYY HH24:MI'));
 
 
-INSERT INTO Assessments (assessmentID, year, semester, type, maxScore) 
-VALUES (1, 2024, 'First', 'Midterm', 100);
+INSERT INTO Assessments (assessmentID, year, semester, type, maxScore) VALUES 
+    (1, 2024, 'First', 'Final', 60),
+    (2, 2024, 'First', 'Midterm', 20),
+    (3, 2024, 'First', 'Project', 20),
+    (4, 2024, 'First', 'Assignments', 20),
 
-INSERT INTO Assessments (assessmentID, year, semester, type, maxScore) 
-VALUES (2, 2024, 'Second', 'Final', 100);
+    (5, 2024, 'Second', 'Final', 60),
+    (6, 2024, 'Second', 'Midterm', 20),
+    (7, 2024, 'Second', 'Project', 20),
+    (8, 2024, 'Second', 'Assignments', 20);
+
 
 INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
 VALUES ('CS101', 1, 1, 2024, 'First', 90);
@@ -447,17 +453,21 @@ VALUES (2, 2);
 
 
 
-INSERT INTO Transportation (vehicleID, driverID, route) 
-VALUES (1, 16, 'Haram');
-
-INSERT INTO Transportation (vehicleID, driverID, route) 
-VALUES (2, 17, 'October');
-
-INSERT INTO EmployeeTransportation (employeeID, vehicleID) 
-VALUES (16, 1);
+INSERT INTO Transportation (vehicleID, driverID, route) VALUES
+    (1, 14, 'Haram'),
+    (2, 15, '6th of October'),
+    (3, 16, 'Nasr City'),
+    (4, 17, 'Maadi'),
+    (5, 18, 'Heliopolis');
 
 INSERT INTO EmployeeTransportation (employeeID, vehicleID) 
-VALUES (17, 2);
+VALUES (1, 1);
+
+INSERT INTO EmployeeTransportation (employeeID, vehicleID) 
+VALUES (2, 2);
+INSERT INTO EmployeeTransportation (employeeID, vehicleID) 
+VALUES (3, 2);
+
 
 INSERT INTO StudentTransportation (studentID, vehicleID) 
 VALUES (1, 1);
@@ -465,6 +475,7 @@ VALUES (1, 1);
 INSERT INTO StudentTransportation (studentID, vehicleID) 
 VALUES (2, 2);
 
+commit;
 
 delete courseassessments;
 

@@ -1,0 +1,14 @@
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
+VALUES ('CS101', 1, 1, 2024, 'First', 90);
+
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
+VALUES ('IS102', 2, 2, 2024, 'Second', 85);
+
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
+VALUES ('AI103', 1, 3, 2024, 'First', 88);
+
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
+VALUES ('CS201', 2, 4, 2024, 'Second', 92);
+
+
+look at this table structure now i want to insert in this table for each student in the studentCourses table 
