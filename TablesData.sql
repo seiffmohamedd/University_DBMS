@@ -424,19 +424,334 @@ INSERT INTO Assessments (assessmentID, year, semester, type, maxScore) VALUES
     (8, 2024, 'Second', 'Assignments', 20);
 
 
-INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
-VALUES ('CS101', 1, 1, 2024, 'First', 90);
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS101', 1, 1, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS101', 2, 1, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS101', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 1, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
 
-INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
-VALUES ('IS102', 2, 2, 2024, 'Second', 85);
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS102', 5, 1, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS102', 6, 1, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS102', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 1, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
 
-INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
-VALUES ('AI103', 1, 3, 2024, 'First', 88);
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS103', 1, 1, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS103', 2, 1, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS103', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 1, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+-- CS101 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS101', 1, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS101', 2, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS101', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
 
-INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) 
-VALUES ('CS201', 2, 4, 2024, 'Second', 92);
+-- CS102 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS102', 5, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS102', 6, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS102', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS103 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS103', 1, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS103', 2, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS103', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS201 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS201', 5, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS201', 6, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS201', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS202 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS202', 1, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS202', 2, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS202', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS203 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS203', 5, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS203', 6, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS203', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS301 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS301', 1, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS301', 2, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS301', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS302 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS302', 5, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS302', 6, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS302', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS303 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS303', 1, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS303', 2, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS303', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS401 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS401', 5, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS401', 6, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS401', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS402 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS402', 1, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS402', 2, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS402', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 4, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- CS403 for Student 4
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('CS403', 5, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('CS403', 6, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('CS403', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 4, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
 
 
+-- IS101 for Student 5
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS101', 1, 5, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS101', 2, 5, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS101', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 5, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS102 for Student 5
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS102', 5, 5, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS102', 6, 5, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS102', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 5, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS103 for Student 5
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS103', 1, 5, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS103', 2, 5, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS103', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 5, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+-- IS101 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS101', 5, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS101', 6, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS101', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS102 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS102', 1, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS102', 2, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS102', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS103 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS103', 5, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS103', 6, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS103', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS201 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS201', 1, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS201', 2, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS201', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS202 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS202', 5, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS202', 6, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS202', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS203 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS203', 1, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS203', 2, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS203', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS301 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS301', 5, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS301', 6, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS301', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS302 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS302', 1, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS302', 2, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS302', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS303 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS303', 5, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS303', 6, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS303', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS401 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS401', 1, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS401', 2, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS401', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 8, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IS402 for Student 8
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IS402', 5, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IS402', 6, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IS402', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 8, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI101 for Student 9
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI101', 1, 9, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI101', 2, 9, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI101', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 9, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI102 for Student 9
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI102', 5, 9, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI102', 6, 9, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI102', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 9, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI103 for Student 9
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI103', 1, 9, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI103', 2, 9, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI103', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 9, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+-- AI101 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI101', 5, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI101', 6, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI101', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI102 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI102', 1, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI102', 2, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI102', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI103 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI103', 5, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI103', 6, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI103', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI201 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI201', 1, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI201', 2, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI201', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI202 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI202', 5, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI202', 6, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI202', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI203 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI203', 1, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI203', 2, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI203', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI301 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI301', 5, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI301', 6, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI301', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI302 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI302', 1, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI302', 2, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI302', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI303 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI303', 5, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI303', 6, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI303', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 12, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- AI401 for Student 12
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('AI401', 1, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('AI401', 2, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('AI401', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 12, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+
+-- IT101 for Student 13
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT101', 1, 13, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT101', 2, 13, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT101', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 13, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT102 for Student 13
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT102', 5, 13, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT102', 6, 13, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT102', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 13, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT103 for Student 13
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT103', 1, 13, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT103', 2, 13, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT103', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 13, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+
+
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT101', 5, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT101', 6, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT101', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT102 for Student 16
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT102', 1, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT102', 2, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT102', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT103 for Student 16
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT103', 5, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT103', 6, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT103', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT201 for Student 16
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT201', 1, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT201', 2, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT201', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT202 for Student 16
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT202', 5, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT202', 6, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT202', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT203 for Student 16
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT203', 1, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT203', 2, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT203', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT301 for Student 16
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT301', 5, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT301', 6, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT301', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT302 for Student 16
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT302', 1, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT302', 2, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT302', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT303 for Student 16
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT303', 5, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT303', 6, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT303', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 7 ELSE 8 END, 16, 2024, 'Second', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+-- IT401 for Student 16
+INSERT INTO CourseAssessments (courseCode, assessmentID, studentID, year, semester, grade) VALUES 
+('IT401', 1, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 60))),
+('IT401', 2, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20))),
+('IT401', CASE WHEN DBMS_RANDOM.VALUE(0,1) < 0.5 THEN 3 ELSE 4 END, 16, 2024, 'First', FLOOR(DBMS_RANDOM.VALUE(0, 20)));
+
+commit;
 INSERT INTO Events (eventID, instructorID, site, datee) 
 VALUES (1, 1, 'Online', TO_DATE('10-02-2024', 'DD-MM-YYYY'));
 
@@ -476,67 +791,6 @@ INSERT INTO StudentTransportation (studentID, vehicleID)
 VALUES (2, 2);
 
 commit;
-
-delete courseassessments;
-
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('CS101', 1, 1, 2024, 'first', 15);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('CS101', 2, 1, 2024, 'first', 60);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('CS101', 3, 1, 2024, 'first', 15);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('IS102', 5, 2, 2024, 'second', 20);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('IS102', 6, 2, 2024, 'second', 60);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('IS102', 8, 2, 2024, 'second', 20);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('AI103', 1, 3, 2024, 'first', 10);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('AI103', 2, 3, 2024, 'first', 50);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('AI103', 3, 3, 2024, 'first', 20);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('CS201', 5, 4, 2024, 'second', 20);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('CS201', 6, 4, 2024, 'second', 60);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('CS201', 7, 4, 2024, 'second', 20);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('IS202', 5, 5, 2024, 'second', 15);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('IS202', 6, 5, 2024, 'second', 60);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('IS202', 7, 5, 2024, 'second', 10);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('AI204', 1, 6, 2024, 'first', 10);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('AI204', 2, 6, 2024, 'first', 55);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('AI204', 3, 6, 2024, 'first', 20);
-
-insert into courseassessments (coursecode, assessmentid, studentid, year, semester, grade) 
-values ('AI204', 4, 6, 2024, 'first', 10);
-
 
 
 
